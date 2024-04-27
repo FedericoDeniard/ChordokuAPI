@@ -18,7 +18,11 @@ chordoku_info = {
 }
 
 
+@app.get("/",tags=["info"])
+def get_chordoku()->dict:
+    return chordoku_info
 
-@app.get("/version", tags=["info"])
-def get_version():
-    return {chordoku_info["version"]["web_version"]}
+
+@app.get("/version", tags=["versions"])
+def get_version()-> dict:
+    return chordoku_info["version"]
