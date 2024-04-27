@@ -11,6 +11,6 @@ app = FastAPI()
 
 app.title = "ChordokuAPI"
 
-@app.get("/version", tags=["info"])
+@app.get("/ChordokuAPI/version", tags=["info"])
 def get_version():
     return {"web_version": 1.0}
